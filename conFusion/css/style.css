@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-dark{
+    background-color: #2503ed;
+    color: white;
+}
+
+.jumbotron{
+    background-color: darkviolet;
+    padding: 70px 30px 70px 30px;
+    margin: 0px;
+    color: floralwhite;
+}
+
+.row-content{
+    min-height: 400px;
+    border-bottom: 1px ridge;
+    padding: 30px 0px 30px 0px;
+    margin: 0;
+}
+
+.footer{
+    background-color: #ccc;
+}
+
+.address{
+    font-size: 80%;
+}
