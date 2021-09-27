@@ -19,7 +19,7 @@
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span> </button>
-            <a href="index.html"><img src="img/logo.png" alt="logo" class="navbar-brand"></a>
+            <a href="index.html"><img src="img/logo.png" height="35px" width="41px" alt="logo" class="navbar-brand"></a>
             
             <div class="collapse navbar-collapse"  id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
@@ -32,21 +32,113 @@
                     <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fa fa-address-card"></i> Contact Us</a> </li>
                 </ul>
+                
+                <!-- Login Modal Inclusion Section -->
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal"><i class="fa fa-sign-in"></i> Login</a>
+                </span>
             </div>
         </div>
     </nav>
     
     
-    <div class="modal">
-        <div class="">
-            <div class="">
-                <div class="">
-                
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Login </h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-12 col-sm-3">
+                                <button type="button" class="btn btn-secondary">Connect</button>
+                            </div>
+                            <div class="form-group col-12 col-sm-6">
+                                <button type="button" class="btn btn-primary  form-control">Password forgotten</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
     
+    <div id="reservationModal" class="modal" role="dialog">
+        <div class="modial-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Reservation</h4>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          						<span aria-hidden="true">&times;</span>
+										</button>
+                </div>
+                <div class="modal-body">
+                    <div class="row row-content">
+                        <div class="card col-12 col-sm-8 offset-sm-2 pr-0 pl-0">
+                            <div class="card-header bg-warning">
+                                <h3>Reserve a Table</h3>
+                            </div>
+                            <div class="card-body">
+                               <form>
+                                  <div class="row form-group">
+                                        <label class="col-12 col-sm-3 col-form-label" for="nb_guest">Number of Guest(s)</label>
+                                        <div class="col-12 col-sm-9">
+                                            <div class="form-group form-check">
+                                                <input type="radio" class="form-check-inline" id="guest1" name="guest"><label for="guest1" class="col-form-label">1</label>
+
+                                                <input type="radio" class="form-check-inline" id="guest2" name="guest"><label for="guest2" class="col-form-label">2</label>
+
+                                                <input type="radio" class="form-check-inline" id="guest3" name="guest"><label for="guest3" class="col-form-label">3</label>
+
+                                                <input type="radio" class="form-check-inline" id="guest4" name="guest"><label for="guest4" class="col-form-label">4</label>
+
+                                                <input type="radio" class="form-check-inline" id="guest5" name="guest"><label for="guest5" class="col-form-label">5</label>
+
+                                                <input type="radio" class="form-check-inline" id="guest6" name="guest"><label for="guest6" class="col-form-label">6</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <label class="col-12 col-sm-3 col-form-label">Section</label>
+                                        <div class="form-goup col-12 col-sm-9">
+                                            <div class="btn-group" role="group" aria-label="section choice">
+                                                <button class="btn btn-success" type="button">Non-Smoking</button>
+                                                <button class="btn btn-danger" type="button">Smoking</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row form-group">
+                                        <label class="col-12 col-sm-3 col-form-label">Date and Time</label>
+                                        <div class="form-group col-12 col-sm-9">
+                                            <input type="date" id="date" name="date" class="col-4 col-sm-5">
+                                            <input type="time" id="time" name="time" class="col-5 col-sm-5">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary offset-sm-3">Reserve</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+   
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -59,11 +151,13 @@
                 </div>
                     
                 <div class="col col-sm-3 align-self-center">
-                    <a class="btn btn-block btn-warning" href="#">Reserve Table</a>
+                    <button type="button" class="btn btn-block btn-warning" data-toggle="modal" data-target="#reservationModal">Reserve Table</button>
                 </div>
             </div>
         </div>
     </header>
+    
+    
 
     <div class="container">
         <div class="row row-content">
